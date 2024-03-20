@@ -7,7 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class GraderTest {
-    @Test
+   @RepeatedTest(3)
    public void fiftyNineShouldReturnF () {
         Grader grader = new Grader();
         assertEquals('F',grader.determineLetterGrade(59));
