@@ -1,5 +1,6 @@
 package com.opentext.mada;
 import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -7,7 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
 public class GraderTest {
-   @RepeatedTest(3)
+
+    @Test
    public void fiftyNineShouldReturnF () {
         Grader grader = new Grader();
         assertEquals('F',grader.determineLetterGrade(59));
