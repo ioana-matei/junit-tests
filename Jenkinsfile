@@ -3,6 +3,7 @@ pipeline{
     agent any
     parameters {
         string(name: 'testsToRun', description: '' )
+        string(name: 'testsToRunConverted', description: '' )
     }
 
     stages {
