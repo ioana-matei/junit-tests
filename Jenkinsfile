@@ -11,7 +11,7 @@ pipeline{
 
         stage('Run Tests1') {
             agent{
-                label agentLabel1
+                label agentLabel2
             }
             steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
