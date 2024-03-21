@@ -6,25 +6,33 @@ pipeline{
         string(name: 'testsToRun', description: '' )
         string(name: 'testsToRunConverted', description: '' )
     }
-
     stages {
-
         stage('Run Tests1') {
+            agent{
+                label agentLabel1
+            }
+            steps {
+                convertTestsToRun format:'', framework: 'mvnSurefire'
+                script {
+                    bat 'call mvn clean test -fn -Dtest="com.opentext.mada.GraderTest#eightyNineShouldReturnB" '
+                }
+                archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
+                junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+            }
+        }
+        stage('Run Tests2') {
             agent{
                 label agentLabel2
             }
             steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
-                    bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
+                    bat 'call mvn clean test -fn -Dtest="com.opentext.mada.GraderTest#ninetyNineShouldReturnA" '
                 }
                 archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
                 junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-
             }
-
         }
-
     }
     // post {
     //     always {
@@ -34,5 +42,4 @@ pipeline{
     //         cleanWs()
     //     }
     // }
-
 }
