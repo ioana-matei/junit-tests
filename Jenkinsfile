@@ -14,7 +14,7 @@ pipeline{
             steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
-                    bat 'call mvn clean test -fn -Dtest="com.opentext.mada.GraderTest#eightyNineShouldReturnB" '
+                    bat 'call mvn clean test -fn -Dtest="com.opentext.mada.SimpleCalculatorTest#twoPlusTwoShouldEqualFour" '
                 }
                 archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
                 junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
