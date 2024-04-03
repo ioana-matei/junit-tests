@@ -1,38 +1,29 @@
-def agentLabel1 = "FF"
-def agentLabel2 = "AA"
+def agentLabel = "FF"
 pipeline{
     agent any
     parameters {
         string(name: 'testsToRun', description: '' )
-        string(name: 'testsToRunConverted', description: '' )
+        string(name: 'testsToRunConverted',description: '' )
     }
+
     stages {
-        stage('Run Tests1') {
+
+        stage('Run Tests') {
             agent{
-                label agentLabel1
+                label agentLabel
             }
             steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
-                    bat 'call mvn clean test -fn -Dtest="com.opentext.mada.SimpleCalculatorTest#twoPlusTwoShouldEqualFour" '
+                    bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
                 }
                 archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
                 junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+
             }
+
         }
-        stage('Run Tests2') {
-            agent{
-                label agentLabel2
-            }
-            steps {
-                convertTestsToRun format:'', framework: 'mvnSurefire'
-                script {
-                    bat 'call mvn clean test -fn -Dtest="com.opentext.mada.GraderTest#ninetyNineShouldReturnA" '
-                }
-                archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
-                junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
-            }
-        }
+
     }
     // post {
     //     always {
@@ -42,4 +33,5 @@ pipeline{
     //         cleanWs()
     //     }
     // }
+
 }
