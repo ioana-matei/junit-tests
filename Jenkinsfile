@@ -15,7 +15,8 @@ pipeline{
             steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
-                    bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
+                    // bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
+                    bat 'call mvn clean test -fn'
                 }
                 archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
                 junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
