@@ -18,9 +18,11 @@ pipeline{
                     // bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
                     bat 'call mvn clean test -fn'
                 }
-                archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
-                publishMicroFocusTestResults 'ONLY_ARCHIVE_FAILED_TESTS_REPORT'
-                junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                catchError {
+                    archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
+                    publishMicroFocusTestResults 'ONLY_ARCHIVE_FAILED_TESTS_REPORT'
+                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                }
 
             }
 
