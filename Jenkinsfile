@@ -33,9 +33,9 @@ pipeline{
     post {
         always {
             // collectPullRequestsToAlmOctane configurationId: '7c8acf03-7e5e-45e5-bab6-5db89b102bf2', credentialsId: 'ce04e494-cc7c-4bb0-b42b-3aa56bfd7ea7', repositoryUrl: 'https://github.com/andreibangau99/junit-tests.git', scmTool: 'github_cloud', sourceBranchFilter: '', targetBranchFilter: '', workspaceId: '17004'
-            node(agentLabel) {
-              cleanWs()
-            }
+            // node(agentLabel) {
+            //   cleanWs()
+            // }
             cleanWs()
         }
     }
