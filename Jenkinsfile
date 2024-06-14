@@ -1,4 +1,4 @@
-def agentLabel = "FF"
+wodef agentLabel = "FF"
 pipeline{
     agent any
     // parameters {
@@ -21,7 +21,7 @@ pipeline{
                 catchError {
                     archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
                     publishMicroFocusTestResults 'ONLY_ARCHIVE_FAILED_TESTS_REPORT'
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
+                    junit allowEmptyResults: true, testResults: 'target/surefire-reports_wrong/*.xml'
                     publishMicroFocusTestResults 'DONT_ARCHIVE_TEST_REPORT'
                 }
 
