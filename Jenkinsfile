@@ -21,7 +21,7 @@ pipeline{
                 catchError {
                     archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
                     publishMicroFocusTestResults 'ONLY_ARCHIVE_FAILED_TESTS_REPORT'
-                    junit allowEmptyResults: true, testResults: 'target/surefire-reports_wrong/*.xml'
+                    junit allowEmptyResults: true, testResults: 'target/surefire-reports-wrong/*.xml'
                     publishMicroFocusTestResults 'DONT_ARCHIVE_TEST_REPORT'
                 }
 
