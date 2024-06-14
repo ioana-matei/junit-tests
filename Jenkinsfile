@@ -1,4 +1,4 @@
-wodef agentLabel = "FF"
+agentLabel = "FF"
 pipeline{
     agent any
     // parameters {
