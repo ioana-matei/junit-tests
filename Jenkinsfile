@@ -16,7 +16,7 @@ pipeline{
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
                     bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
-                    bat 'call move "C:/JenkinsAgent/workspace/RunTestsPip/target/surefire-reports/*.xml" "C:/JenkinsAgent/workspace/RunTestsPip"'
+                    bat 'call move "C:\\JenkinsAgent\\workspace\\RunTestsPip\\target\\surefire-reports\\*.xml" "C:\\JenkinsAgent\\workspace\\RunTestsPip\\"'
                     // bat 'call mvn clean test -fn'
                 }
                 catchError {
