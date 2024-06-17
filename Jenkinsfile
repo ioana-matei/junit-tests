@@ -15,7 +15,7 @@ pipeline{
             steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
-                    bat 'call mvn clean test -fn -Dtest="%testsToRunConverted% -DoutputDirectory=" '
+                    bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
                     bat 'call move "D:\junit repo\junit-tests\target\surefire-reports\*.xml" "D:\junit repo\junit-tests\"'
                     // bat 'call mvn clean test -fn'
                 }
