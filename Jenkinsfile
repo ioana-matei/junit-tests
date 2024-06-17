@@ -15,8 +15,8 @@ pipeline{
             steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
-                    // bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
-                    bat 'call mvn clean test -fn'
+                    bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
+                    // bat 'call mvn clean test -fn'
                 }
                 catchError {
                     archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
