@@ -1,4 +1,4 @@
-agentLabel = "FF"
+sagentLabel = "FF"
 pipeline{
     agent any
     // parameters {
@@ -23,7 +23,7 @@ pipeline{
                     // archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
                     archiveArtifacts artifacts: '*.xml', onlyIfSuccessful: false
                     publishMicroFocusTestResults 'ONLY_ARCHIVE_FAILED_TESTS_REPORT'
-                    junit allowEmptyResults: true, testResults: '*Test.xml'
+                    junit allowEmptyResults: true, testResults: 'reports/*Test.xml'
                     // junit allowEmptyResults: true, testResults: 'target/surefire-reports-wrong/*.xml'
                     publishMicroFocusTestResults 'DONT_ARCHIVE_TEST_REPORT'
                 }
