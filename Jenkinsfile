@@ -1,4 +1,4 @@
-sagentLabel = "FF"
+agentLabel = "FF"
 pipeline{
     agent any
     // parameters {
