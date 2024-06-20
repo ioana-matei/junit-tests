@@ -3,7 +3,7 @@ pipeline{
     agent any
     parameters {
         string(name: 'octane_test_result_name_run_regex_pattern',defaultValue: 'ReturnF', description: '' )
-        string(name: 'testsToRunConverted',description: '' )
+        // string(name: 'testsToRunConverted',description: '' )
     }
 
     stages {
