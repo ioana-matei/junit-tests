@@ -1,10 +1,10 @@
 agentLabel = "FF"
 pipeline{
     agent any
-    // parameters {
-    //     string(name: 'testsToRun', description: '' )
-    //     string(name: 'testsToRunConverted',description: '' )
-    // }
+    parameters {
+        string(name: 'octane_test_result_name_run_regex_pattern',defaultValue: 'ReturnF', description: '' )
+        string(name: 'testsToRunConverted',description: '' )
+    }
 
     stages {
 
