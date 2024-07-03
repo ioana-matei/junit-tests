@@ -16,15 +16,15 @@ pipeline{
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
                     bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
-                    bat 'call move "C:\\JenkinsAgent\\workspace\\RunTestsPip\\target\\surefire-reports\\*.xml" "C:\\JenkinsAgent\\workspace\\RunTestsPip\\"'
+                    // bat 'call move "C:\\JenkinsAgent\\workspace\\RunTestsPip\\target\\surefire-reports\\*.xml" "C:\\JenkinsAgent\\workspace\\RunTestsPip\\"'
                     // bat 'call mvn clean test -fn'
                 }
                 catchError {
-                    // archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
-                    archiveArtifacts artifacts: '*.xml', onlyIfSuccessful: false
+                    archiveArtifacts artifacts: 'target/surefire-reports/*.xml', onlyIfSuccessful: false
+                    // archiveArtifacts artifacts: '*.xml', onlyIfSuccessful: false
                     publishMicroFocusTestResults 'ONLY_ARCHIVE_FAILED_TESTS_REPORT'
-                    junit allowEmptyResults: true, testResults: '*Test.xml'
-                    // junit allowEmptyResults: true, testResults: 'target/surefire-reports-wrong/*.xml'
+                    // junit allowEmptyResults: true, testResults: '*Test.xml'
+                    junit allowEmptyResults: true, testResults: 'target/surefire-reports/*.xml'
                     publishMicroFocusTestResults 'DONT_ARCHIVE_TEST_REPORT'
                 }
 
