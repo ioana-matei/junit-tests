@@ -2,6 +2,10 @@ package com.opentext.mada;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.EmptySource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -44,6 +48,13 @@ public class GraderTest {
     public void eightyShouldReturnB () {
         Grader grader = new Grader();
         assertEquals('B',grader.determineLetterGrade(80));
+    }
+
+    @ParameterizedTest
+    @ValueSource(ints = {25,50,75})
+    public void parameterGradeTest(int grade) {
+        Grader grader = new Grader();
+        assertEquals('C',grader.determineLetterGrade(grade));
     }
 
     @Test
