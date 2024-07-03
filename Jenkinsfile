@@ -2,7 +2,7 @@ agentLabel = ""
 pipeline{
     agent any
     parameters {
-        string(name: 'octane_test_result_name_run_regex_pattern',defaultValue: '(int)\[,*\]', description: '' )
+        string(name: 'octane_test_result_name_run_regex_pattern',defaultValue: '(int)[,*]', description: '' )
         string(name: 'testsToRunConverted',description: '' )
     }
 
