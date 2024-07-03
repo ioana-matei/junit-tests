@@ -58,6 +58,12 @@ public class GraderTest {
     }
 
     @Test
+    public void zOneHundredShouldReturnA () {
+        Grader grader = new Grader();
+        assertEquals('A',grader.determineLetterGrade(100));
+    }
+
+    @Test
     public void negativeOneShouldReturnIllegalArgumentException() {
         Grader grader = new Grader();
         assertThrows(IllegalArgumentException.class, () -> {
