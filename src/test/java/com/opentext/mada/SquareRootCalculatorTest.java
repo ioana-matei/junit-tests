@@ -1,13 +1,13 @@
 package com.opentext.mada;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
-class SquareRootCalculatorTest {
+public class SquareRootCalculatorTest {
 
     @Test
-    void SixteenSqrtShouldBeFour() {
+    public void SixteenSqrtShouldBeFour() {
         SquareRootCalculator sqrtcalculator = new SquareRootCalculator();
         assertEquals(4,sqrtcalculator.squareRoot(16));
     }
