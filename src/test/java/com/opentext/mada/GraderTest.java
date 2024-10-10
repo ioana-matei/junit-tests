@@ -1,10 +1,8 @@
 package com.opentext.mada;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.RepeatedTest;
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.EmptySource;
-import org.junit.jupiter.params.provider.MethodSource;
 import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -52,7 +50,7 @@ public class GraderTest {
 
     @ParameterizedTest
     @ValueSource(ints = {25,50,75})
-    public void parameterGradeTest(int grade) {
+    public void parameterizedGrade(int grade) {
         Grader grader = new Grader();
         assertEquals('C',grader.determineLetterGrade(grade));
     }
