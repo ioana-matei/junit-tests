@@ -12,7 +12,7 @@ pipeline{
             agent{
                 label agentLabel
             }
-            steps {y
+            steps {
                 convertTestsToRun format:'', framework: 'mvnSurefire'
                 script {
                     bat 'call mvn clean test -fn -Dtest="%testsToRunConverted%" '
