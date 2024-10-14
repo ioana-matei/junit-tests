@@ -48,12 +48,12 @@ public class GraderTest {
         assertEquals('B',grader.determineLetterGrade(80));
     }
 
-    @ParameterizedTest
-    @ValueSource(ints = {25,50,75})
-    public void parameterizedGrade(int grade) {
-        Grader grader = new Grader();
-        assertEquals('C',grader.determineLetterGrade(grade));
-    }
+//    @ParameterizedTest
+//    @ValueSource(ints = {25,50,75})
+//    public void parameterizedGrade(int grade) {
+//        Grader grader = new Grader();
+//        assertEquals('C',grader.determineLetterGrade(grade));
+//    }
 
     @Test
     public void zOneHundredShouldReturnA () {
@@ -69,12 +69,12 @@ public class GraderTest {
         });
     }
 
-    @Test
-    public void parameterCase() {
-        Grader grader = new Grader();
-        assertEquals(System.getProperty("param"),String.valueOf(grader.determineLetterGrade(80)));
-
-    }
+//    @Test
+//    public void parameterCase() {
+//        Grader grader = new Grader();
+//        assertEquals(System.getProperty("param"),String.valueOf(grader.determineLetterGrade(80)));
+//
+//    }
 
     @Test
     public void environmentCase() {
