@@ -5,18 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c96bf4f5-fd24-4991-b2bd-f727a2e0969b" name="Changes" comment="another test class">
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/opentext/mada/AnotherSimpleCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opentext/mada/AnotherSimpleCalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/opentext/mada/GraderTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opentext/mada/GraderTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/opentext/mada/SimpleCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opentext/mada/SimpleCalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/opentext/mada/SquareRootCalculatorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opentext/mada/SquareRootCalculatorTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/opentext/mada/TestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opentext/mada/TestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/opentext/mada/TestSuiteSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/opentext/mada/TestSuiteSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/junit-tests-1.0-SNAPSHOT-tests.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/junit-tests-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/junit-tests-1.0-SNAPSHOT-tests.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/junit-tests-1.0-SNAPSHOT-tests.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/junit-tests-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/junit-tests-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,33 +33,37 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2WwAFBD35OpRLsbdyTQE0R6HsFG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;JUnit.GraderTest.parameterGradeTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SquareRootCalculatorTest.SixteenSqrtShouldBeFour.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestSuite.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.TestSuiteSuite.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/workspace/junit-tests/pom.xml&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.GraderTest.parameterGradeTest.executor": "Run",
+    "JUnit.SquareRootCalculatorTest.SixteenSqrtShouldBeFour.executor": "Run",
+    "JUnit.TestSuite.executor": "Run",
+    "JUnit.TestSuiteSuite.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/workspace/junit-tests/pom.xml",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
@@ -256,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1720681081273</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="comment failure tests">
+      <option name="closed" value="true" />
+      <created>1728893272906</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1728893272907</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +283,7 @@
     <MESSAGE value="parameterTest" />
     <MESSAGE value="another test" />
     <MESSAGE value="another test class" />
-    <option name="LAST_COMMIT_MESSAGE" value="another test class" />
+    <MESSAGE value="comment failure tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="comment failure tests" />
   </component>
 </project>
