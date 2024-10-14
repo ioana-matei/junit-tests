@@ -11,6 +11,8 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class GraderTest {
 
+
+
     @Test
    public void fiftyNineShouldReturnF () {
         Grader grader = new Grader();
@@ -48,12 +50,12 @@ public class GraderTest {
         assertEquals('B',grader.determineLetterGrade(80));
     }
 
-//    @ParameterizedTest
-//    @ValueSource(ints = {25,50,75})
-//    public void parameterizedGrade(int grade) {
-//        Grader grader = new Grader();
-//        assertEquals('C',grader.determineLetterGrade(grade));
-//    }
+    @ParameterizedTest
+    @ValueSource(ints = {25,50,75})
+    public void parameterizedGrade(int grade) {
+        Grader grader = new Grader();
+        assertEquals('C',grader.determineLetterGrade(grade));
+    }
 
     @Test
     public void zOneHundredShouldReturnA () {
