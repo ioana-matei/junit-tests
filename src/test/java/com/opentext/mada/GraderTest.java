@@ -59,6 +59,7 @@ public class GraderTest {
     @ParameterizedTest
     @ValueSource(ints = {25,50,75})
     public void parameterizedGrade(int grade) {
+        System.out.println("-------------------ParameterizedTest--------------------------");
         Grader grader = new Grader();
         assertEquals('C',grader.determineLetterGrade(grade));
     }
