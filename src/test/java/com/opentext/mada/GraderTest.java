@@ -72,44 +72,44 @@ public class GraderTest {
         assertEquals('A',grader.determineLetterGrade(100));
     }
 
-//    @Test
-//    public void negativeOneShouldReturnIllegalArgumentException() {
-//        Grader grader = new Grader();
-//        System.out.println("-------------------zOneHundredShouldReturnA--------------------------");
-//        assertThrows(IllegalArgumentException.class, () -> {
-//            grader.determineLetterGrade(-1);
-//        });
-//    }
+    @Test
+    public void negativeOneShouldReturnIllegalArgumentException() {
+        Grader grader = new Grader();
+        System.out.println("-------------------zOneHundredShouldReturnA--------------------------");
+        assertThrows(IllegalArgumentException.class, () -> {
+            grader.determineLetterGrade(-1);
+        });
+    }
 
-//    @Test
-//    public void parameterCase() {
-//        Grader grader = new Grader();
-//        assertEquals(System.getProperty("param"),String.valueOf(grader.determineLetterGrade(80)));
-//
-//    }
+    @Test
+    public void parameterCase() {
+        Grader grader = new Grader();
+        assertEquals(System.getProperty("param"),String.valueOf(grader.determineLetterGrade(80)));
 
-//    @Test
-//    public void environmentCase() {
-//        Grader grader = new Grader();
-//        System.out.println("-------------------environmentCase--------------------------");
-//        System.out.println(System.getProperty("ENV"));
-//    }
-//
-//    @Test
-//    public void $data_Driven_Properties() {
-//        Grader grader = new Grader();
-//        System.out.println("-------------------$data_Driven_Properties--------------------------");
-//        System.out.println(System.getProperty("DataSet1"));
-//    }
-//
-//    @Test
-//    public void _predefinedParameters() {
-//        Grader grader = new Grader();
-//        System.out.println("-------------------_predefinedParameters--------------------------");
-//        System.out.println(System.getProperty("#sctm_keywords"));
-//        System.out.println(System.getProperty("SILK Test Name"));
-//
-//    }
+    }
+
+    @Test
+    public void environmentCase() {
+        Grader grader = new Grader();
+        System.out.println("-------------------environmentCase--------------------------");
+        System.out.println(System.getProperty("ENV"));
+    }
+
+    @Test
+    public void $data_Driven_Properties() {
+        Grader grader = new Grader();
+        System.out.println("-------------------$data_Driven_Properties--------------------------");
+        System.out.println(System.getProperty("DataSet1"));
+    }
+
+    @Test
+    public void _predefinedParameters() {
+        Grader grader = new Grader();
+        System.out.println("-------------------_predefinedParameters--------------------------");
+        System.out.println(System.getProperty("#sctm_keywords"));
+        System.out.println(System.getProperty("SILK Test Name"));
+
+    }
 
     @Test
     public void systemParameters() {
